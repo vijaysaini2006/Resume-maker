@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Resume Builder</h1>
+
+    <button onclick="toggleDarkMode()" class="dark-mode-toggle">🌙 Toggle Dark Mode</button>
+
+    <div class="builder">
+      <form id="resume-form">
+        <h2>Your Details</h2>
+
+        <input type="file" id="photo" accept="image/*" />
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="tel" id="phone" placeholder="Phone" required />
+        <textarea id="summary" placeholder="Professional Summary" required></textarea>
+        <textarea id="education" placeholder="Education (e.g. BSc CS, 2020)" required></textarea>
+        <textarea id="experience" placeholder="Work Experience" required></textarea>
+        <textarea id="skills" placeholder="Skills (comma-separated)" required></textarea>
+        <textarea id="projects" placeholder="Projects (comma-separated)" required></textarea>
+        <textarea id="hobbies" placeholder="Hobbies (comma-separated)" required></textarea>
+
+        <button type="submit">Generate Resume</button>
+      </form>
+
+      <div id="resume-preview">
+        <img id="preview-photo" src="" alt="Profile Photo" />
+        <h2 id="preview-name">Your Name</h2>
+        <p><strong>Email:</strong> <span id="preview-email"></span></p>
+        <p><strong>Phone:</strong> <span id="preview-phone"></span></p>
+        <p><strong>Summary:</strong> <span id="preview-summary"></span></p>
+        <p><strong>Education:</strong> <span id="preview-education"></span></p>
+        <p><strong>Experience:</strong> <span id="preview-experience"></span></p>
+        <p><strong>Skills:</strong> <span id="preview-skills"></span></p>
+        <p><strong>Projects:</strong> <span id="preview-projects"></span></p>
+        <p><strong>Hobbies:</strong> <span id="preview-hobbies"></span></p>
+      </div>
+    </div>
+
+    <button onclick="window.print()" class="print-btn">Download / Print Resume</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
